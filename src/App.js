@@ -1,4 +1,5 @@
 import React from 'react';
+import TimeCountDown from './Components/TimeCountDown';
 import logo from './logo.svg';
 import './App.css';
 
@@ -16,7 +17,16 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          TimeCountDown: <TimeCountDown
+            second={600}
+            format="MM:SS"
+            className="font-color-primary-medium m-left-xs m-right-xs"
+            handleTimeExpired={() => {
+
+              console.log('TimeExpired!!');
+
+            }}
+          />
         </a>
       </header>
     </div>
